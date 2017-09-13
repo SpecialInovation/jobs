@@ -3,10 +3,12 @@
 import Vue from 'vue';
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';    // 使用 CSS
+import VueRouter from 'vue-router';
 import App from './App';
 
 Vue.config.productionTip = false;
 
+Vue.use(VueRouter);
 Vue.use(iView);
 
 /* eslint-disable no-new */
