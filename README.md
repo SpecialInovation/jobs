@@ -1,6 +1,6 @@
 # jobs
 
-> gathering and navigation of jobs
+> gathering of official recruiting website
 
 ## Build Setup
 
