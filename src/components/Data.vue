@@ -1,6 +1,6 @@
 <template>
   <div class="data">
-    <el-card :body-style="{ padding: '10px' }" v-for="(o, index) in 16" class="data-box">
+    <el-card :body-style="{ padding: '10px' }" v-for="(o, index) in 16" class="data-box" key="{{ o }}">
       <img src="../assets/logo.png" class="image">
       <div style="padding: 14px;">
         <div class="bottom clearfix">
@@ -13,6 +13,8 @@
 </template>
 
 <script>
+// const fs = require('fs');
+
 export default {
   name: 'data',
   data() {
@@ -20,6 +22,11 @@ export default {
       msg: 'it is data page',
       currentDate: new Date(),
     };
+  },
+  mounted() {
+    // console.log(fs);
+    console.log('fafdsfdsa');
+    // fs.readFileSync('@/data/enterprise.json');
   },
 };
 </script>
