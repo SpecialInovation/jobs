@@ -1,10 +1,10 @@
 <template>
   <div class="data">
-    <el-card :body-style="{ padding: '10px' }" v-for="(o, index) in 16" class="data-box" key="{{ o }}">
-      <img src="../assets/logo.png" class="image">
+    <el-card :body-style="{ padding: '10px' }" v-for="it in data['it']" class="data-box" key="{{ o }}">
+      <img v-bind:src="it.logo" class="image">
       <div style="padding: 14px;">
         <div class="bottom clearfix">
-          <span>Airbnb</span>
+          <span>{{ it.name }}</span>
           <el-button type="text" class="button">Have a Look</el-button>
         </div>
       </div>
@@ -13,20 +13,15 @@
 </template>
 
 <script>
-// const fs = require('fs');
+const enterprise = require('@/data/enterprise');
 
 export default {
   name: 'data',
   data() {
     return {
-      msg: 'it is data page',
       currentDate: new Date(),
+      data: enterprise,
     };
-  },
-  mounted() {
-    // console.log(fs);
-    console.log('fafdsfdsa');
-    // fs.readFileSync('@/data/enterprise.json');
   },
 };
 </script>
